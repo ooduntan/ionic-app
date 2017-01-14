@@ -1,0 +1,19 @@
+<div class="list">
+
+  <a class="item item-avatar" ng-class="{'item-vip': item.featured}" ng-repeat="item in vm.listings | listingFilter" ui-sref="app.locdetali({locid: item.id})">
+    <img ng-show="item.featured" ng-if="item.logo" ng-src="{{item.logo}}">
+    <ul>
+      <li>{{item.name}}
+        <i class='icon ion-record Popup-category' ng-repeat="category in item.categories" style='color: {{vm.colorForCategory(category)}};'></i>
+
+        <p class="prating"  ng-show="item.stars">
+          <i class="icon {{star}}" ng-repeat="star in item.stars track by $index"></i>
+        </p>
+
+      </li>
+      <li class="item-icon-right"><span class="distance">{{item.distance + ' miles'}}</span><i class="icon ion-ios-arrow-right"></i></li>
+    </ul>
+  </a>
+  <ion-infinite-scroll on-infinite="vm.loadMore(true)" immediate-check="true" distance="10%" icon="ion-loading-c">
+  </ion-infinite-scroll>
+</div>

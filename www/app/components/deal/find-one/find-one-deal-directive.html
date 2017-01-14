@@ -1,0 +1,62 @@
+<div>
+  <div class="topgraphics">
+    <img ng-src="{{vm.deal.image}}"/>
+  </div>
+  <div>
+    <p class="ptitle">{{vm.deal.name}}</p>
+    <p class="pdescription">
+      {{vm.deal.description}}
+    </p>
+  </div>
+
+  <div class="list">
+
+    <a class="item" ng-show="vm.deal.location" ng-click="vm.handleLocClick()">
+      <h2 class="prestauranttitle"><b>{{vm.deal.location.name}}</b></h2>
+      <p class="pstar" ng-if="vm.deal.location.rate">
+          <span ng-repeat="star in vm.getNumber(vm.deal.location.rate) track by $index">
+            <i class="icon ion-star"></i>
+          </span>{{vm.deal.location.reviews}}<img src="img/DisclosureIndicator.png" class="icon forward-first"/>
+      </p>
+    </a>
+
+    <a class="item" ng-show="vm.deal.event_obj" ng-click="vm.handleEventClick()">
+      <h2 class="prestauranttitle"><b>{{vm.deal.event_obj.name}}</b></h2>
+    </a>
+
+    <a class="item item-avatar item-icon-left item-icon-right" ng-show="vm.deal.location.street" ng-click="vm.openNativeMap(vm.deal.location)" style="padding-top: 5px !important;display: block;">
+      <img src="img/PinBlack.png" style="top:16px;" class="addImage" />
+      <div ng-if="vm.deal.location.street">{{vm.deal.location.street}}</div>
+      <div><span ng-if="vm.deal.location.city">{{vm.deal.location.city}},</span> <span ng-if="vm.deal.location.state">{{ vm.deal.location.state }}</span><span ng-if="!vm.deal.location.state">FL </span><span ng-if="vm.deal.location.zipcode && vm.deal.location.zipcode.length > 0">{{vm.deal.location.zipcode}}</span></div>
+      <span class="distancespan" ng-if="vm.deal.location.distance">{{vm.deal.location.distance}}</span><img src="img/DisclosureIndicator.png" class="icon forward-img"/>
+    </a>
+
+    <ion-item class="item item-avatar item-icon-left item-icon-right" ng-show="vm.deal.location.phone" ng-click="vm.dialPhoneNumber(vm.deal.location.phone)" ng-if="vm.deal.location.phone && vm.deal.location.phone.length > 0">
+      <img src="img/Telephone.png" style="top:16px;" class="listImage" />
+      {{vm.deal.location.phone}}
+      <img src="img/DisclosureIndicator.png" class="icon forward-img"/>
+    </ion-item>
+
+    <ion-item class="item item-avatar item-icon-left item-icon-right" ng-show="vm.deal.launch_url" ng-click="vm.goWebsite(vm.deal.launch_url)" style="margin-right:10px; border-right:0;" ng-if="vm.deal.launch_url && vm.deal.launch_url.length > 0">
+      <img src="img/Website.png" style="top:16px;" class="listImage" />
+      <u style="white-space: pre-line;">{{vm.deal.launch_url}}</u>
+    </ion-item>
+  </div>
+
+  <div ng-if="vm.isLoyalty">
+    <div class="stamps">
+      <p class="rating">
+		<span ng-repeat="number in vm.getNumber(vm.deal.stamp) track by $index">
+		<i class="icon ion-ios-circle-outline" ng-class="{'ion-record': $index < vm.user.getStamp(vm.deal)}"></i>
+		</span>
+      </p>
+    </div>
+    <div class="row">
+      <div class="col col-33 col-offset-33 col-center">
+        <button class="button button-block button-block-purple button-royal" ng-click="vm.stamp()">
+          STAMP
+        </button>
+      </div>
+  </div>
+    </div>
+</div>

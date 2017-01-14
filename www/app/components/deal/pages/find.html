@@ -1,0 +1,15 @@
+<ion-view view-title="Deals" cache-view="false" class="Deal">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content style="bottom:45px">
+    <div style="top:0">
+    </div>
+      <find-deal></find-deal>
+    <div style="bottom:0; ">
+      <ad-load ad-loc="Deals/Coupon_Footer" ng-show="vm.coupanlist"></ad-load>
+      <ad-load ad-loc="Deals/Loyalty_Footer" ng-show="!vm.coupanlist"></ad-load>
+    </div>
+  </ion-content>
+</ion-view>
+

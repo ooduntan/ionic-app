@@ -1,0 +1,12 @@
+diff --git a/www/app/components/layout/tab/tab-directive.html b/www/app/components/layout/tab/tab-directive.html
+index 1fb8e49..2a1e0c1 100644
+--- a/www/app/components/layout/tab/tab-directive.html
++++ b/www/app/components/layout/tab/tab-directive.html
+@@ -1,6 +1,6 @@
+ <ion-footer-bar class="Footer">
+   <ion-tabs class="tabs tabs-icon-bottom">
+-    <ion-tab title="Explore" icon-off="exploreIcon" icon-on="exploreIcon_fill" href="#/app/explore"  ng-click="vm.checkTab()">
++    <ion-tab title="Explore" icon-off="exploreIcon" icon-on="exploreIcon_fill" ng-click="vm.checkTab()">
+       <ion-nav-view name="explore" cache-view="false" ></ion-nav-view>
+     </ion-tab>
+     <ion-tab title="Favorites" icon-off="favorites" icon-on="favorites_fill" href="#/app/findFavorite">

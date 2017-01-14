@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="34px" viewBox="0 0 20 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Pin3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Explore/Map" transform="translate(-150.000000, -392.000000)">
+            <g id="Map+Overlay" transform="translate(-26.000000, -55.000000)">
+                <g id="Markers" transform="translate(74.000000, 212.000000)">
+                    <g id="Pin3" transform="translate(102.000000, 235.000000)">
+                        <ellipse id="PinShadow" fill-opacity="0.1" fill="#000000" cx="10" cy="30.5" rx="6" ry="3.5"></ellipse>
+                        <path d="M9.96843602,6.56535144 C11.8843602,6.56535144 13.4441232,8.14097444 13.4441232,10.0799042 C13.4441232,12.0188339 11.8864929,13.5944569 9.96843602,13.5944569 C8.05094787,13.5944569 6.49274882,12.0167252 6.49274882,10.0799042 C6.49274882,8.14308307 8.05094787,6.56535144 9.96843602,6.56535144 L9.96843602,6.56535144 Z M9.96843602,0 C15.4657346,0 19.936872,4.52118211 19.936872,10.0799042 C19.936872,10.4496326 19.9115166,10.8439457 19.8481043,11.3536581 C19.0735071,18.6980032 12.254218,27.3161022 10.0572038,29.9373163 C7.80417062,27.3118371 0.887156398,18.7151118 0.0866350711,11.3360224 C0.0280094787,10.852476 0,10.4544249 0,10.0799042 C0,4.52118211 4.47118483,0 9.96843602,0 L9.96843602,0 Z" id="Shape" fill="#5A2B83"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

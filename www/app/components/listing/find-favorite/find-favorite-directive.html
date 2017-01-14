@@ -1,0 +1,22 @@
+<div>
+  <div class="col col-60 col-offset-20 col-center">
+    <div class="button-bar padding">
+      <button class="button button-small" ng-class="{btnactive: vm.orderByKey == 'distance', btnNormal: vm.orderByKey != 'distance'}" ng-click="vm.orderByKey = 'distance'" style="font-size: 13px;">Distance</button>
+      <button class="button button-small" ng-class="{btnactive: vm.orderByKey == 'name', btnNormal: vm.orderByKey != 'name'}"  ng-click="vm.orderByKey = 'name'" style="font-size: 13px;">A-Z</button>
+    </div>
+  </div>
+  <div class="list">
+    <div class="list-item text-center" ng-if="!vm.listings.length"><span>There are currently no favorites.</span></div>
+    <a class="item item-avatar" ng-repeat="item in vm.listings | orderBy:vm.orderByKey" ng-click="vm.resturantDescription(item.id)">
+      <img ng-if="item.imgsrc" ng-src="{{item.imgsrc}}">
+      <img ng-hide="item.imgsrc" ng-src="img/Thumbnail.png">
+      <ul>
+        <li>{{item.name}}
+          <i class='icon ion-record Popup-category' ng-repeat="category in item.categories" style='color: {{vm.colorForCategory(category)}};'></i>
+          <stars rate="{{ item.rate }}"></stars>
+        </li>
+        <li class="item-icon-right"><span class="distance">{{item.distance}}</span><i class="icon ion-ios-arrow-right"></i></li>
+      </ul>
+    </a>
+  </div>
+</div>

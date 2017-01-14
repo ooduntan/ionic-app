@@ -1,0 +1,12 @@
+<div>
+  <ion-list>
+    <ion-item ng-repeat="(day, time) in vm.dates track by $index" ng-show="time.open.hour">
+      <div class="row" ng-class="{'bold': vm.isToday($index)}">
+        <div class="col-40">{{ day }}</div>
+        <div class="col-60 left">
+          {{ time.open.hour + ':' + time.open.minute + ' ' + time.open.time }} — {{ time.close.hour + ':' + time.close.minute + ' ' + time.close.time }}
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
+</div>

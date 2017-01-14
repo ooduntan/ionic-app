@@ -1,0 +1,42 @@
+<ion-content class="has-header" has-header="true" has-tabs="true" scroll="true">
+  <div class="topgraphics" ng-if="vm.event.image">
+    <img ng-src="{{vm.event.image}}"/>
+  </div>
+  <div>
+    <p class="ptitle">{{vm.event.name}}</p>
+    <div ng-if="vm.event.date">
+      <p class="pdescription">{{vm.getFormattedDate(vm.event.date, 'dddd, MMM DD, YYYY [|] h:mm A')}}</p>
+    </div>
+    <p class="pdescription">{{vm.event.description}}</p>
+  </div>
+
+  <div class="list">
+    <a class="item alignText item-avatar item-icon-left item-icon-right background" ng-if="vm.event.coupon" ng-click="vm.goCoupon(vm.event.coupon)">
+      <img src="img/path22.png" style="top:16px;" class="listImage" />
+      Special Offer
+      <img src="img/DisclosureIndicator.png" class="icon forward-img"/>
+    </a>
+
+    <a class="item alignText item-heading" href="#" ng-if="vm.event.location.name">
+      <h2 class="prestauranttitle"><b>{{vm.event.location.name}}</b></h2>
+    </a>
+    <a class="item item-avatar item-icon-left item-icon-right" ng-show="vm.event.location.street" ng-click="vm.openNativeMap(vm.event.location)" style="padding-top: 5px !important;display: block;">
+      <img src="img/PinBlack.png" style="top:16px;" class="addImage" />
+      <div ng-if="vm.event.location.street">{{vm.event.location.street}}</div>
+      <div><span ng-if="vm.event.location.city">{{vm.event.location.city}},</span> <span ng-if="vm.event.location.state">{{ vm.event.location.state }}</span><span ng-if="!vm.event.location.state">FL </span><span ng-if="vm.event.location.zipcode && vm.event.location.zipcode.length > 0">{{vm.event.location.zipcode}}</span></div>
+      <span class="distancespan" ng-if="vm.event.location.distance">{{vm.event.location.distance}}</span><img src="img/DisclosureIndicator.png" class="icon forward-img"/>
+    </a>
+
+    <a class="item item-avatar item-icon-left item-icon-right" ng-href="tel:{{vm.event.location.phone}}" ng-if="vm.event.location.phone && vm.event.location.phone.length > 0" style="padding-top: 16px !important;">
+      <img src="img/Telephone.png" style="top:16px;" class="listImage" />
+      <span>{{vm.event.location.phone}}</span>
+      <img src="img/DisclosureIndicator.png" class="icon forward-img"/>
+    </a>
+
+    <ion-item class="item item-avatar item-icon-left item-icon-right" ng-click="vm.goWebsite(vm.event.location.website)" style="margin-right:10px; border-right:0;padding-top: 16px !important;" ng-if="vm.event.location.website && vm.event.location.website.length > 0">
+      <img src="img/Website.png" style="top:16px;" class="listImage" />
+      <u style="white-space: pre-line;">{{vm.event.location.website}}</u>
+    </ion-item>
+
+  </div>
+</ion-content>

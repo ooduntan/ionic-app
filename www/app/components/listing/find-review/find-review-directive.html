@@ -1,0 +1,16 @@
+<div class="list">
+  <div class="item item-divider">
+    Reviews
+    <a class="allcomment"><u>{{ vm.length(vm.listing.reviews) }}</u></a>
+    <a ng-click="vm.addReview()"><img class="addimg" src="img/Add.png"></a>
+  </div>
+  <ul id="ulreviews">
+    <li ng-repeat="review in vm.listing.reviews">
+      <p class="reviewtitle">{{review.title}}</p>
+      <p class="pstarwithinfo">
+        <small class="pnote" style="color: black;" time="{{ review.createdAt}}"></small>
+        <stars rate="{{ review.rate }}"></stars>
+      </p>
+    </li>
+  </ul>
+</div>

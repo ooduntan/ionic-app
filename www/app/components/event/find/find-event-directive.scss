@@ -1,0 +1,22 @@
+.newimg{
+ border-radius: 0;max-width: 50px;max-height: 50px;
+}
+.event-m{
+position: absolute;left: 25px;top: 7px;color: white; font-weight:500
+}
+.event-p
+{position: absolute;left: 32px;top: 30px;font-weight: 500;
+}
+.one-event {
+  .title{
+    font-weight: 900;
+    font-size: 18px;
+  }
+  p{
+    font-size: 14px;
+  }
+  .location {
+    font-size: 14px !important;
+    top: 30px !important;
+  }
+}

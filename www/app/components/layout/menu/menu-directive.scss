@@ -1,0 +1,61 @@
+.Menu {
+  .button.button-icon.icon.ion-navicon {
+    color: #FFF !important;
+  }
+
+  .icon.ion-ios-arrow-forward {
+    font-size: 20px !important;
+  }
+
+  .bar {
+    background: #5A2B83 !important;
+    padding: 0px !important;
+  }
+
+  .bar.bar-stable .title,
+  span.back-text {
+    color: #fff !important;
+  }
+
+  .ion-ios-arrow-back:before {
+    color: #fff;
+  }
+
+  .right-buttons .button.button-royal.button-clear {
+    color: #fff !important;
+  }
+
+  .ptitle {
+    font-size: 20px !important;
+    font-weight: 700;
+    margin: 0px;
+    padding-top: 5px !important;
+    padding-left: 10px !important;
+  }
+
+  .pstar {
+    margin: 0px;
+    padding-left: 10px !important;
+    padding-bottom: 2px !important;
+    font-weight: 500;
+    font-size: 15px !important;
+  }
+
+  .pdescription {
+    margin: 0px;
+    padding: 10px !important;
+    font-weight: 400;
+    font-size: 15px !important;
+    color: #444444;
+  }
+
+  .prestauranttitle {
+    font-size: 20px !important;
+    font-weight: 700;
+    margin: 0px;
+    display: block;
+    padding-top: 5px !important;
+    padding-left: 10px !important;
+  }
+
+}

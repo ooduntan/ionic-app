@@ -1,0 +1,21 @@
+<ion-content>
+  <div class="logo">
+    <img ng-src="img/HP_logo_stacked.svg">
+  </div>
+  <div class="button-container">
+    <button class="button button-block button-royal" ng-click="vm.registerByFacebook()">
+      Login with Facebook
+    </button>
+    <!--<button class="button button-block button-royal" ng-click="vm.login()">-->
+      <!--Login with Email-->
+    <!--</button>-->
+    <button class="button button-block button-custom" ng-click="vm.loginasguest(user)">
+      Continue as Guest
+    </button>
+  </div>
+  <div align="center" ng-bind="vm.BACKEND_URL" ng-show="vm.IS_DEBUG"></div>
+</ion-content>
+
+<div style="bottom:0; ">
+  <ad-load ad-loc="Home_Footer"></ad-load>
+</div>

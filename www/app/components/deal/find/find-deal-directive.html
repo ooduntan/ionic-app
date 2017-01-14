@@ -1,0 +1,41 @@
+<div>
+  <div class="col col-60 col-offset-20 col-center">
+    <div class="button-bar padding">
+      <button class="button button-small btnactive" id="btncoupan" ng-click="vm.showCoupons()" style="font-size: 13px;">Coupons</button>
+      <button class="button button-small btnNormal"  id="btnloyalty" ng-click="vm.showLoyalty()" style="font-size: 13px;">Loyalty</button>
+    </div>
+  </div>
+  <div class="list" ng-show="vm.coupanlist">
+
+    <div class="list-item text-center" ng-if="vm.coupons === null" ><span>There are currently no deals.</span></div>
+    <a class="item item-avatar" ng-repeat="coupan in vm.coupons" ng-click="vm.findOneCoupan(coupan)">
+      <img ng-src="{{coupan.listImage}}">
+      <ul>
+        <!--TODO add name2 to the base -->
+        <li><p>{{coupan.name}}</p> {{coupan.location.name}}</li>
+
+        <!--TODO have to calculate the distance-->
+        <li class="item-icon-right"><span class="distance">{{coupan.location.distance}}</span><i class="icon ion-ios-arrow-right"></i></li>
+      </ul>
+    </a>
+  </div>
+
+  <div class="list loyalty" ng-hide="vm.coupanlist">
+    <div class="list-item text-center" ng-if="vm.loyalties === null" ><span>There are currently no loyalty offers.</span></div>
+    <a class="item item-avatar" href="#" ng-repeat="loyalty in vm.loyalties" ng-click="vm.findOneLoyalty(loyalty)">
+      <img style='margin-top:7px' ng-src="{{loyalty.listImage}}">
+      <ul>
+        <!--TODO add name2 to the base -->
+        <li><p>{{loyalty.location.name}}</p> {{loyalty.name}}
+          <p class="ratingicon">
+		<span ng-repeat="number in vm.getNumber(loyalty.stamp) track by $index"  style="position: initial;">
+		<i class="icon ion-ios-circle-outline" ng-class="{'ion-record': $index < vm.user.getStamp(loyalty)}"></i>
+		</span>
+          </p>
+        </li>
+        <!--TODO have to calculate the distance-->
+        <li class="item-icon-right"><span style='margin-top:7px'  class="distance middle">{{loyalty.location.distance}}</span><i class="icon ion-ios-arrow-right"></i></li>
+      </ul>
+    </a>
+  </div>
+</div>

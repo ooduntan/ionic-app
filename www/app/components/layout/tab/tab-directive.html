@@ -1,0 +1,32 @@
+<ion-footer-bar class="Footer">
+  <ion-tabs class="tabs tabs-icon-bottom">
+    <ion-tab title="Explore" icon-off="exploreIcon" icon-on="exploreIcon_fill" ui-sref="app.explore"  ng-click="vm.checkTab()">
+      <ion-nav-view name="explore" cache-view="false" >
+        <ion-content>
+          EXPLOER
+        </ion-content>
+      </ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Favorites" icon-off="favorites" icon-on="favorites_fill" ui-sref="app.findFavorite">
+      <ion-nav-view name="favorite" cache-view="false">
+        <ion-content>
+          Favorites
+        </ion-content>
+      </ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Deals" icon-on="deals_fill" icon-off="deals" ui-sref="app.findDeal">
+      <ion-nav-view name="deal" cache-view="false">
+        <ion-content>
+          Deals
+        </ion-content>
+      </ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Events" icon-on="events_fill" icon-off="events" ui-sref="app.findEvent">
+      <ion-nav-view name="event" cache-view="false">
+        <ion-content>
+          Events
+        </ion-content>
+      </ion-nav-view>
+    </ion-tab>
+  </ion-tabs>
+</ion-footer-bar>

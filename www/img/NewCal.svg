@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="77px" viewBox="0 0 90 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>NewCal</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="NewCal">
+            <path d="M13.6383237,0 L76.20329,0 C83.3618664,0 89.1650391,5.05218506 89.1650391,11.2789241 L89.1650391,65.7210759 C89.1650391,71.9502537 83.3590638,77 76.20329,77 L13.6383237,77 C6.47974744,77 0.676574731,71.9478149 0.676574731,65.7210759 L0.676574731,11.2789241 C0.676574731,5.04974633 6.48255002,0 13.6383237,0 Z" id="Back" fill="#DED5E6"></path>
+            <path d="M84.375,65.3462225 L84.375,28.1707317 L5.625,28.1707317 L5.625,65.3462225 L5.625,65.7343843 C5.625,68.8386435 8.14648855,71.3658537 11.2569023,71.3658537 L78.7430977,71.3658537 C81.8661153,71.3658537 84.375,68.8445589 84.375,65.7343843 L84.375,65.3462225 Z" id="Rectangle-3" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,95 @@
+<ion-content has-header="true" class="has-header has-tabs" has-tabs="true" scroll="true">
+  <div ng-hide="formdata.featured === true && formdata.imageHeader" id="map" data-tap-disabled="true"></div>
+  <div ng-show="formdata.featured === true && formdata.imageHeader">
+    <img ng-src="{{ formdata.imageHeader }}" width="100%"/>
+  </div>
+  <div>
+    <div style="display: inline-block; width: 72px; height: 72px;margin-left: 11px; margin-top: -24px; margin-bottom: 10px; border: 1px solid #BBBBBB; position: absolute;" ng-show="formdata.featured === true && formdata.logo">
+      <img ng-src="{{ formdata.logo }}" style="width: 70px; height: 70px; margin-bottom: 20px" />
+    </div>
+    <div>
+      <p ng-class="{'has-logo': formdata.featured === true && formdata.logo}" class="ptitle">{{formdata.name}}</p>
+      <!--TODO: Height is lost when rate=0; Need to fix the height of this section-->
+      <p ng-class="{'has-logo': formdata.featured === true && formdata.logo}" class="pstar">
+        <span ng-repeat="star in stars track by $index" ng-show="stars">
+        <i class="icon {{star}}"></i>
+        </span>
+      </p>
+      <div class="row">
+        <div class="col col-90">
+          <!--TODO: JS errors here!!!-->
+          <label class="lblInfo" ng-repeat="tag in tagsinfo  track by $index" style="background-color: {{ tag.color }}"> {{tag.value | capitalize:true}} </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="list">
+
+      <a class="item alignText item-avatar item-icon-left item-icon-right background" ng-click="goCoupon(formdata.coupon)" ng-if="formdata.coupon">
+        <img src="img/path22.png" style="top:16px;" class="listImage" />
+        Special Offer
+        <img src="img/DisclosureIndicator.png" class="icon forward-img"/>
+      </a>
+
+      <a ng-if="formdata.offer" class="item item-avatar item-icon-left item-icon-right background" href="#">
+        <img src="img/path22.png" style="top:16px;" class="listImage" />
+        {{formdata.offer}}
+        <img src="img/DisclosureIndicator.png"  class="icon forward-img"/>
+      </a>
+
+      <a class="item item-avatar item-icon-left item-icon-right"  ng-click="openNativeMap(formdata)" style="padding-top: 5px !important;display: block;">
+        <img src="img/PinBlack.png" style="top:16px;" class="addImage" />
+        <div ng-if="formdata.street">{{formdata.street}}</div>
+        <div><span ng-if="formdata.city">{{formdata.city}},</span> <span ng-if="formdata.state">{{ formdata.state }}</span><span ng-if="!formdata.state">FL </span><span ng-if="formdata.zipcode && formdata.zipcode.length > 0">{{formdata.zipcode}}</span></div>
+        <span class="distancespan" ng-if="formdata.distance">{{formdata.distance}}</span><img src="img/DisclosureIndicator.png" class="icon forward-img"/>
+      </a>
+
+
+      <!--TODO: Cleanup phone # data and use ui-mask?: http://stackoverflow.com/questions/31152892/ui-utils-phone-mask-does-not-work-with-ionic-input-->
+      <ion-item class="item item-avatar item-icon-left item-icon-right" ng-click="dialPhoneNumber(formdata.phone)" ng-if="formdata.phone && formdata.phone.length > 0">
+        <img src="img/Telephone.png" style="top:16px;" class="listImage" />
+        {{formdata.phone}}
+        <img src="img/DisclosureIndicator.png" class="icon forward-img"/>
+      </ion-item>
+
+      <ion-item class="item item-avatar item-icon-left item-icon-right" ng-click="vm.goWebsite(formdata.website)" style="margin-right:10px; border-right:0;" ng-if="formdata.website && formdata.website.length > 0">
+        <img src="img/Website.png" style="top:16px;" class="listImage" />
+        <u style="white-space: pre-line;">{{formdata.website}}</u>
+      </ion-item>
+      <ion-item ng-if="formdata.hours" class="item item-avatar item-icon-left item-icon-right" ng-click="vm.goHours()">
+        <img src="img/Clock.png" style="top:16px;" class="listImage" />
+        <b>{{ hoursCurrentStatus }}</b>  &nbsp;
+        <span>{{ hoursNextStatus }}</span>
+        <img src="img/DisclosureIndicator.png" class="icon forward-img"/>
+      </ion-item>
+      <ion-item class="item item-text-wrap" ng-if="formdata.description && formdata.description.length > 0">
+        <div ng-class="vm.showFullDescription ? 'item-expand active' : 'item-expand inactive' ">
+          <p>{{ formdata.description }}</p>
+        </div>
+        <div ng-click="vm.toggleShowFullDescription()" class="item-expand-footer">
+          {{ vm.showFullDescription ? 'Less' : 'More' }}
+        </div>
+      </ion-item>
+
+      <div class="list" ng-if="formdata.images">
+        <div class="item item-divider">
+          Photos
+        </div>
+        <div>
+          <div ng-repeat="photo in formdata.images track by $index" style="display: inline-block;margin: 5px;width: 30%;">
+            <img ng-src="{{ photo }}" style="width: 100%;"/>
+          </div>
+        </div>
+      </div>
+
+      <find-review listing="formdata"></find-review>
+    </div>
+  </div>
+  <div class="row" ng-hide="true">
+    <div class="col col-50 col-offset-25 col-center">
+      <button class="button button-block button-royal" ng-click="location()">
+        Edit Listing
+      </button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-content style="top: 20px;">
+  <ion-list>
+    <ion-item class="item-icon-right" menu-close ng-click="vm.about()">
+      About
+      <i class="icon ion-ios-arrow-right"></i>
+    </ion-item>
+    <ion-item class="item-icon-right" menu-close ng-click="vm.login()" ng-show="vm.isOffline">
+      Login
+      <i class="icon ion-ios-arrow-right"></i>
+    </ion-item>
+    <ion-item class="item-icon-right" menu-close ng-click="vm.logout()" ng-show="vm.isOnline">
+      Logout
+      <i class="icon ion-ios-arrow-right"></i>
+    </ion-item>
+    <ion-item class="item-icon-right" menu-close ng-click="vm.suggest()">
+      Suggest a Listing
+      <i class="icon ion-ios-arrow-right"></i>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

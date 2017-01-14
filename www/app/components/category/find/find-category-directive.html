@@ -1,0 +1,44 @@
+<ion-content class="has-header">
+  <ion-list>
+    <!-- <ion-item ng-repeat="chat in categories">
+           <ion-radio ng-model="choice" ng-value="'{{chat.id}}'">{{chat.name}}</ion-radio>
+       <div ng-if="chat.subCategories">
+            <ion-item ng-repeat="subCat in chat.subCategories">
+            <ion-radio ng-model="choice" style="margin-left: 25px; border-left:0px" ng-value="'{{subCat}}'">{{subCat}}</ion-radio>
+          </ion-item>
+      </div>
+     </ion-item> -->
+    <!-- All Categories--->
+    <ion-item class="item-icon-right" >
+      <div class="item-checkbox checkbox-royal">
+        <label class="checkbox grey">
+          <input type="checkbox" ng-model="vm.category.all" ng-change="vm.selectAll()">
+        </label>
+        <span>All Categories</span>
+      </div>
+    </ion-item>
+    <!-- End All Categories -->
+    <div ng-repeat="cat in vm.categories | orderBy:'weight'">
+      <ion-item class="item-icon-right">
+        <div class="item-checkbox checkbox-royal {{vm.classFor(cat)}}">
+          <label class="checkbox grey" style="left: initial;">
+            <input type="checkbox" ng-model="cat.selected" ng-change="vm.selected(cat.selected, cat, 'cat')">
+          </label>
+          <div ng-click="vm.toggle(cat)">{{cat.name}}</div>
+        </div>
+
+      </ion-item>
+      <div class="accordionItem" ng-class="{'is-expanded animateIn': cat.open}" ng-if="cat.subCategories" ng-repeat="subCat in cat.sub | orderBy:'value' track by $index ">
+        <ion-item ng-if="cat.subCategories" class="item-icon-right" >
+          <div class="item-checkbox checkbox-royal" style="margin-left: 25px; border-left:0px">
+            <label class="checkbox grey" style="left: initial;">
+              <input type="checkbox" ng-model="subCat.selected" ng-change="vm.selected(subCat.selected, cat, 'subCat')">
+            </label>
+            <span>{{subCat.value}}</span>
+          </div>
+        </ion-item>
+      </div>
+    </div>
+
+  </ion-list>
+</ion-content>

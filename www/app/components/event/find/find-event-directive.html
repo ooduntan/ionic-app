@@ -1,0 +1,18 @@
+<div>
+  <div class="list-item text-center" ng-if="vm.events.length > 0" ><span>There are currently no events.</span></div>
+  <ion-list>
+    <ion-item class="item item-avatar one-event" auto-list-divider auto-list-divider-value="{{event.date}}" auto-list-divider-function="vm.dividerFunction"  ng-repeat="event in vm.events2" ng-click="vm.findOne(event)">
+      <img src="img/NewCal.png" style="top: 19px; border-radius: 0;max-width: 50px;max-height: 50px;">
+      <div style="position: absolute;left: 13px;top: 17px;color: white; font-weight:700">{{ vm.getFormattedDate(event.date,'MMM') | uppercase}}</div>
+      <div style="position: absolute;left: 21px;top: 37px;color: black; font-weight: 700;">{{ vm.getFormattedDate(event.date,'DD') }}</div>
+      <ul>
+        <li>
+          <p class="title">{{event.name}}</p>
+          <p >{{event.location.city}}<i ng-show="event.location">, FL</i>&nbsp</p>
+          <p>{{vm.getFormattedDate(event.date,'dddd [at] h:mm A')}}</p>
+        </li>
+        <li class="item-icon-right"><span class="distance location">{{vm.getDistance(event)}}</span><i class="icon ion-ios-arrow-right"></i></li>
+      </ul>
+    </ion-item>
+  </ion-list>
+</div>

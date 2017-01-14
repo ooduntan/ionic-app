@@ -1,0 +1,33 @@
+.Home {
+  .button-custom {
+    font-weight: 600;
+  }
+
+  .logo {
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 148px;
+    margin: 20% auto 15%;
+    position: relative;
+    width: 196px;
+  }
+
+  .button-container .button {
+    margin: 20px auto !important;
+    padding: 0 !important;
+    position: relative !important;
+    width: 60% !important;
+    font-size: 13px;
+    min-height: 25px !important;
+    height: 40px;
+  }
+
+  .ad {
+    position: absolute;
+    padding: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}

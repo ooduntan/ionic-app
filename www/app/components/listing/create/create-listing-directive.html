@@ -1,0 +1,62 @@
+<div>
+  <div class="p-10">
+    Do you own, run, or know of a Healthy Place or Event that you think should be listed? Fill out the form below to send in your suggestion!
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Business name</label>
+      <input type="text" ng-model="vm.listing.name">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Address</label>
+      <input type="text" ng-model="vm.listing.street">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-40">
+      <label>City</label>
+      <input type="text" ng-model="vm.listing.city">
+    </div>
+    <div class="col col-20">
+      <label>ST</label>
+      <input type="text" ng-model="vm.listing.state" ng-change="vm.listing.state = vm.listing.state.toUpperCase()">
+    </div>
+    <div class="col col-30">
+      <label>Zip</label>
+      <input type="text" ng-model="vm.listing.zipcode">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Phone number</label>
+      <input ng-model="vm.listing.phone" type="text">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Website</label>
+      <input ng-model="vm.listing.website" type="text">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Your Email</label>
+      <input type="text" ng-model="vm.listing.email">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Notes</label>
+      <textarea type="text" ng-model="vm.listing.note" rows="4" cols="50"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-33 col-offset-33 col-center">
+      <button class="button button-block button-royal" ng-click="vm.create()">
+        SAVE
+      </button>
+    </div>
+  </div>
+</div>

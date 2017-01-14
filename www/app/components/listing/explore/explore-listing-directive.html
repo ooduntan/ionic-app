@@ -1,0 +1,32 @@
+<ion-content style="bottom:45px" has-header="true" has-tabs="true" scroll="true" class="has-header">
+  <div>
+    <ad-load ad-loc="Explore/Map_Header" ng-hide="vm.explorelist"></ad-load>
+    <ad-load ad-loc="Explore/List_Header" ng-hide="!vm.explorelist"></ad-load>
+  </div>
+
+  <div class="list listcategory">
+    <a class="item item-icon-right itemcategory" ui-sref="app.categories()" style="font-size: 15px;">
+      Filter by Category <span ng-show="vm.numberOfCategories > 0">({{vm.numberOfCategories}})</span>
+      <i class="icon ion-ios-arrow-forward"></i>
+    </a>
+  </div>
+  <div class="item-input-inset">
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" ng-model="vm.searchText" placeholder="Search" ng-change="vm.filterMarkers(vm.searchText)">
+    </label>
+  </div>
+
+  <find-listing-by-map ng-hide="vm.explorelist"></find-listing-by-map>
+  <div class="col col-60 col-offset-20 col-center">
+    <div class="button-bar padding">
+      <button class="button button-small btnactive" id="btnmap" ng-click="vm.maplist()" style="font-size: 13px;">Map</button>
+      <button class="button button-small btnNormal" style="border: 1px #5A2B83 solid;" id="btnlist" ng-click="vm.itemlist()"style="font-size: 13px;">List</button>
+    </div>
+  </div>
+  <find-listing ng-if="vm.explorelist"></find-listing>
+  <div style="bottom:0; ">
+    <ad-load ad-loc="Explore/Map_Footer" ng-hide="vm.explorelist"></ad-load>
+    <ad-load ad-loc="Explore/List_Footer" ng-hide="!vm.explorelist"></ad-load>
+  </div>
+</ion-content>

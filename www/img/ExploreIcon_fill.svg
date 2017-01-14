@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Explore/Map" transform="translate(-24.000000, -530.000000)" fill="#5A2B83">
+            <g id="TabBar" transform="translate(0.000000, 526.000000)">
+                <g id="Tab-Item-1" transform="translate(0.000000, 4.000000)">
+                    <g id="android-explore-512px" transform="translate(24.000000, 0.000000)">
+                        <path d="M10,8.89992187 C9.39503906,8.89992187 8.89992187,9.39503906 8.89992187,10 C8.89992187,10.6049609 9.39503906,11.1000781 10,11.1000781 C10.6103516,11.1000781 11.1000781,10.6049609 11.1000781,10 C11.1000781,9.39503906 10.6103516,8.89992187 10,8.89992187 L10,8.89992187 Z M10,0 C4.47507812,0 0,4.47507812 0,10 C0,15.52 4.47507812,20 10,20 C15.5249219,20 20,15.52 20,10 C20,4.47507812 15.5249219,0 10,0 L10,0 Z M12.1899219,12.1899219 L4,16 L7.81003906,7.81007812 L16,4 L12.1899219,12.1899219 L12.1899219,12.1899219 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

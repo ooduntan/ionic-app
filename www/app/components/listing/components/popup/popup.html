@@ -1,0 +1,19 @@
+<div id='infobox' class="Popup" ng-click="ctrl.goDetails()">
+  <div ng-if="ctrl.picture != null" class="Popup-column">
+    <img class="Popup-image" ng-src={{ctrl.picture}}>
+  </div>
+  <div class="Popup-column">
+    <p style='margin:0;line-height:10pt;' id='infobox-name'>
+      {{ ctrl.name }}
+    </p>
+    <p style='margin:0;line-height:10pt;'>
+      {{ ctrl.distances }} miles
+      <b style='float:right;'>
+        {{ ctrl.getStatus(ctrl.hours) }}
+      </b>
+    </p>
+    <p style='margin:0;line-height:10pt;'>
+      <i class='icon ion-record Popup-category' ng-repeat="category in ctrl.categories" style='color: {{ctrl.colorForCategory(category)}};'></i>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+platforms/
+plugins/
+node_modules/
+
+.idea/
+
+.vscode/
+
+.tmp
+.sass-cache
+*.swp
+*.swo
+*.log
+*.DS_Store
+
+www/css/
+
+# TODO: Remove www/libs/ from git. (Do one-by-one for now.)
+www/lib/moment-timezone/

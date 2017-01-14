@@ -1,0 +1,89 @@
+.Footer {
+  padding: 0!important;
+  height: 44px!important;
+  border: none;
+
+  .tabs {
+    color: #5A2B83 !important;
+    position: relative !important;
+    border: none !important;
+    padding: 0;
+  }
+
+  a.tab-item {
+    opacity: 1 !important;
+  }
+
+  .tabs .tab-item .icon.exploreIcon {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 22px;
+    margin-top: 5px;
+    background-image: url('../img/ExploreIcon.svg');
+    background-size:contain;
+  }
+  .tabs .tab-item .icon.favorites {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 22px;
+    margin-top: 5px;
+    background-image: url('../img/HeartIcon.svg');
+    background-size:contain;
+  }
+  .tabs .tab-item .icon.deals {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 22px;
+    margin-top: 5px;
+    background-image: url('../img/DealsIcon.svg');
+    background-size:contain;
+  }
+  .tabs .tab-item .icon.events {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 22px;
+    margin-top: 5px;
+    background-image: url('../img/EventsIcon.svg');
+    background-size:contain;
+  }
+
+  .tabs .tab-item .icon.exploreIcon_fill {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 22px;
+    margin-top: 5px;
+    background-image: url('../img/ExploreIcon_fill.svg');
+    background-size:contain;
+  }
+  .tabs .tab-item .icon.favorites_fill {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 22px;
+    margin-top: 5px;
+    background-image: url('../img/HeartIcon_fill.svg');
+    background-size:contain;
+  }
+  .tabs .tab-item .icon.deals_fill {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 22px;
+    margin-top: 5px;
+    background-image: url('../img/DealsIcon_fill.svg');
+    background-size:contain;
+  }
+  .tabs .tab-item .icon.events_fill {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 22px;
+    margin-top: 5px;
+    background-image: url('../img/EventsIcon_fill.svg');
+    background-size:contain;
+  }
+
+  .tabs-positive > .tabs,
+  .tabs.tabs-positive {
+    border-color: #969696 !important;
+    background-color: #F4F4F4 !important;
+    color: #5A2B83 !important;
+  }
+}

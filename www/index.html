@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<!--  <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">-->
+
+  <title></title>
+
+
+  <!-- compiled css output -->
+  <link href="css/main.css" rel="stylesheet">
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <script src="lib/firebase/firebase.js"></script>
+  <script src="lib/rsvp.js/rsvp.js"></script>
+  <script src="lib/angularfire/dist/angularfire.js"></script>
+  <script src="lib/geofire/dist/geofire.js"></script>
+  <script src="lib/lodash/dist/lodash.min.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!-- google maps javascript -->
+  <script src="https://maps.google.com/maps/api/js?key=AIzaSyDYGA8ZPuWcivfWmYQyKn99Jwcmpc7xluU"></script>
+  <script type="text/javascript" src="lib/infobox/infobox.js"></script>
+  <!-- <script src='//maps.googleapis.com/maps/api/js'></script> -->
+
+  <!-- inject:js -->
+  <script src="app/app.js"></script>
+  <script src="app/components/category/category.js"></script>
+  <script src="app/components/layout/layout.js"></script>
+  <script src="app/components/user/user.js"></script>
+  <script src="app/components/session/session.js"></script>
+  <script src="app/components/deal/deal.js"></script>
+  <script src="app/components/listing/listing.js"></script>
+  <script src="app/components/static/static.js"></script>
+  <script src="app/components/utils/utils.js"></script>
+  <script src="app/config/constant.js"></script>
+  <script src="app/config/init.js"></script>
+  <script src="app/config/routes.js"></script>
+  <script src="app/components/event/event.js"></script>
+  <script src="app/components/category/config/routes.js"></script>
+  <script src="app/components/category/find/find-category-directive.js"></script>
+  <script src="app/components/category/data/category-data.js"></script>
+  <script src="app/components/deal/config/routes.js"></script>
+  <script src="app/components/deal/data/deal-data.js"></script>
+  <script src="app/components/deal/find/find-deal-directive.js"></script>
+  <script src="app/components/deal/find-one/find-one-deal-directive.js"></script>
+  <script src="app/components/event/config/routes.js"></script>
+  <script src="app/components/event/data/event-data.js"></script>
+  <script src="app/components/event/find/find-event-directive.js"></script>
+  <script src="app/components/event/find-one/find-one-event-directive.js"></script>
+  <script src="app/components/layout/menu/menu-directive.js"></script>
+  <script src="app/components/layout/tab/tab-directive.js"></script>
+  <script src="app/components/listing/config/routes.js"></script>
+  <script src="app/components/listing/create/create-listing-directive.js"></script>
+  <script src="app/components/listing/create-review/create-review-service.js"></script>
+  <script src="app/components/listing/data/listing-data.js"></script>
+  <script src="app/components/listing/data/restaurant.js"></script>
+  <script src="app/components/listing/explore/explore-listing-directive.js"></script>
+  <script src="app/components/listing/find/find-listing-directive.js"></script>
+  <script src="app/components/listing/find-by-map/find-listing-by-map-directive.js"></script>
+  <script src="app/components/listing/find-favorite/find-favorite-directive.js"></script>
+  <script src="app/components/listing/find-hours/find-hours-directive.js"></script>
+  <script src="app/components/listing/find-one/find-one-listing-directive.js"></script>
+  <script src="app/components/listing/find-review/find-review-directive.js"></script>
+  <script src="app/components/listing/model/listing-model.js"></script>
+  <script src="app/components/listing/toggle-favorite/toggle-favorite-directive.js"></script>
+  <script src="app/components/listing/share/share-directive.js"></script>
+  <script src="app/components/session/config/routes.js"></script>
+  <script src="app/components/session/create/create-session-directive.js"></script>
+  <script src="app/components/session/destroy/destroy-session-directive.js"></script>
+  <script src="app/components/session/model/session-model.js"></script>
+  <script src="app/components/static/about/about-directive.js"></script>
+  <script src="app/components/static/config/routes.js"></script>
+  <script src="app/components/static/home/home-directive.js"></script>
+  <script src="app/components/user/config/routes.js"></script>
+  <script src="app/components/user/create/create-user-service.js"></script>
+  <script src="app/components/user/model/user-model.js"></script>
+  <script src="app/components/utils/open-web-site/open-web-site-directive.js"></script>
+  <script src="app/components/utils/ad-load/ad-load-directive.js"></script>
+  <script src="app/components/utils/capitalize/capitalize.js"></script>
+  <script src="app/components/utils/color/color-service.js"></script>
+  <script src="app/components/utils/geo/geo-service.js"></script>
+  <script src="app/components/utils/header-action/header-action-directive.js"></script>
+  <script src="app/components/utils/header-action/header-action-observer-service.js"></script>
+  <script src="app/components/utils/local-storage/local-storage-service.js"></script>
+  <script src="app/components/utils/star-rating/start-rating-directive.js"></script>
+  <script src="app/components/utils/stars/stars-directive.js"></script>
+  <script src="app/components/utils/stars-input/stars-input-directive.js"></script>
+  <script src="app/components/utils/time/time-directive.js"></script>
+  <script src="app/components/utils/time/timer-service.js"></script>
+  <script src="app/components/listing/components/listing-filter/listing-filter.js"></script>
+  <script src="app/components/listing/components/popup/popup.js"></script>
+  <!-- endinject -->
+
+  <script src="lib/geolocation-marker/geolocation-marker.js"></script>
+  <script src="lib/moment/moment.js"></script>
+  <script src="lib/moment-timezone/moment-timezone.js"></script>
+  <script src="lib/ionic-ion-autoListDivider-master/ionic-ion-autoListDivider.js"></script>
+</head>
+
+<body ng-app="healthyPlaces">
+<ion-nav-view>
+</ion-nav-view>
+</body>
+</html>

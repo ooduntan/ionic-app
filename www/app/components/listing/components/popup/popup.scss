@@ -1,0 +1,21 @@
+.Popup {
+  display: flex;
+}
+
+.Popup-column {
+  display: flex;
+  flex-direction: column;
+
+  &:nth-child(2) {
+    margin-left: 6px;
+  }
+}
+
+.Popup-image {
+  width: 100%;
+  height: auto;
+}
+
+.Popup-category:not(:first-child) {
+  margin-left: 2px;
+}

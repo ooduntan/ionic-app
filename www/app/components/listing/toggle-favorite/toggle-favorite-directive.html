@@ -1,0 +1,6 @@
+<div class="headbtnpadding" ng-click="vm.handleFavorite(vm.listing.id)">
+  <button class="button button-clear button-positive">
+    <img src="img/HeartWhite.png" ng-hide="vm.user.isFavorite(vm.listing.id)">
+    <img src="img/HeartRed.png" ng-show="vm.user.isFavorite(vm.listing.id)">
+  </button>
+</div>
